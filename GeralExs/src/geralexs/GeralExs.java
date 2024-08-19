@@ -19,5 +19,5 @@ public class GeralExs {
         }
         System.out.println("");
     }
-    
+
 }

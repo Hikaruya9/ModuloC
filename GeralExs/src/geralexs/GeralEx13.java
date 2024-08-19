@@ -45,7 +45,7 @@ public class GeralEx13 {
 
         System.out.println("Digite o tipo de operacao (1-soma, 2-subtrai, 3-multiplica, 4-divide):");
         int escolha = teclado.nextInt();
-        
+
         switch (escolha) {
             case 1:
                 System.out.println(soma(numero1, numero2));

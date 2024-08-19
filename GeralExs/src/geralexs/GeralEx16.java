@@ -10,23 +10,23 @@ import java.util.Scanner;
  *
  * @author Aluno
  */
-public class GeralEx4 {
+public class GeralEx16 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite um numero:");
-        int numero1 = teclado.nextInt();
-        System.out.println("Digite outro numero");
-        int numero2 = teclado.nextInt();
+        System.out.println("Digite um ano:");
+        int ano = sc.nextInt();
 
-        if (numero1 > numero2) {
-            System.out.println("O maior numero e o " + numero1);
+        if (ano % 100 == 0 && ano % 400 != 0) {
+            System.out.println("Esse nao e um ano bissexto!");
+        } else if (ano % 4 == 0) {
+            System.out.println("Esse e um ano bissexto!");
         } else {
-            System.out.println("O maior numero e o " + numero2);
+            System.out.println("Esse nao e um ano bissexto!");
         }
     }
 }

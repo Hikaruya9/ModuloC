@@ -8,7 +8,7 @@ package geralexs;
  *
  * @author Aluno
  */
-public class GeralEx10 {
+public class GeralEx15 {
 
     public static void intArrayRandom(int[] numeros, int max) {
         for (int i = 0; i < numeros.length; i++) {
@@ -27,18 +27,23 @@ public class GeralEx10 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] numeros = new int[5];
-        int maior = 0;
+        int[] numeros = new int[10];
+        int temp;
 
-        intArrayRandom(numeros, 50);
-        intArrayShow(numeros);
+        intArrayRandom(numeros, 100); //Traz os valores do array aleatoriamente
 
-        for (int numero : numeros) {
-            if (maior < numero) {
-                maior = numero;
+        intArrayShow(numeros); //Exibe array limpo
+
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - i - 1; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
             }
         }
 
-        System.out.println("O maior numero e " + maior);
+        intArrayShow(numeros); //Exibe array reordenado
     }
 }

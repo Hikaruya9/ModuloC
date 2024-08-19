@@ -5,6 +5,7 @@
 package geralexs;
 
 import java.util.Scanner;
+
 /**
  *
  * @author Aluno
@@ -16,10 +17,10 @@ public class GeralEx9 {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        
+
         System.out.println("Digite o numero equivalente ao dia da semana (1 a 7):");
         int dia = teclado.nextInt();
-        
+
         switch (dia) {
             case 1:
                 System.out.println("Today is Sunday");
@@ -46,5 +47,5 @@ public class GeralEx9 {
                 System.out.println("Esta nao e uma opcao valida, tente novamente");
         }
     }
-    
+
 }

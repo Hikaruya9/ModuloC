@@ -10,23 +10,25 @@ import java.util.Scanner;
  *
  * @author Aluno
  */
-public class GeralEx4 {
+public class GeralEx17 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int temp;
 
         System.out.println("Digite um numero:");
-        int numero1 = teclado.nextInt();
-        System.out.println("Digite outro numero");
-        int numero2 = teclado.nextInt();
+        int n1 = sc.nextInt();
+        System.out.println("Digite outro numero:");
+        int n2 = sc.nextInt();
 
-        if (numero1 > numero2) {
-            System.out.println("O maior numero e o " + numero1);
-        } else {
-            System.out.println("O maior numero e o " + numero2);
+        while (n1 % n2 != 0) {
+            temp = n1 % n2;
+            n1 = n2;
+            n2 = temp;
         }
+        System.out.println("O MDC dos numeros e " + n2);
     }
 }

@@ -8,18 +8,22 @@ package geralexs;
  *
  * @author Aluno
  */
-public class GeralEx3 {
+public class GeralEx14 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Tabuada do " + i);
-            for (int j = 1; j <= 10; j++) {
-                System.out.println(i + " x " + j + " = " + (i * j));
-            }
-            System.out.println("---------------------------");
+        int soma;
+        int n1 = 0, n2 = 1;
+
+        for (int i = 0; i < 10; i++) {
+            soma = n1 + n2;
+            System.out.printf("[ " + n1 + " ]");
+            n1 = n2;
+            n2 = soma;
         }
+        System.out.println("");
     }
+
 }
