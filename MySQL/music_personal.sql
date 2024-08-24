@@ -36,3 +36,9 @@ SELECT * FROM albums WHERE artist = 'Breaking Benjamin';
 SELECT * FROM albums WHERE album_name IN ('The', 'We'); -- doesn't work with half string
 SELECT * FROM albums WHERE artist LIKE 'Thousand%'; -- select everything that have 'Thousand'
 SELECT * FROM albums WHERE album_name REGEXP '^T.*he.*'; -- select everything that starts with T and have he afterwards
+
+ALTER TABLE albums
+ADD UNIQUE (album_name);
+
+ALTER TABLE albums
+ADD COLUMN billboard_position decimal(4,0);
