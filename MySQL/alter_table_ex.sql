@@ -139,8 +139,3 @@ menu_price decimal(7,2)
 
 ALTER TABLE menu
 ADD COLUMN id int NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
-
-
-
-
--- 
