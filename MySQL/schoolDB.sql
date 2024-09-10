@@ -109,6 +109,10 @@ WHERE salary > 3000.7;
 SELECT * FROM teachers
 WHERE position = 'Math' OR position = 'Physics';
 
+SELECT * FROM teachers
+WHERE salary > 3000 AND salary < 5000;
+
+
 -- DROP
 DROP DATABASE school;
 DROP TABLE students;
@@ -167,6 +171,9 @@ SELECT DISTINCT * FROM books;
 TRUNCATE books;
 SELECT * FROM books;
 
+SELECT * FROM books
+WHERE title LIKE '%game%' OR title LIKE '%ring%';
+
 
 
 
@@ -177,6 +184,21 @@ DEFAULT CHARACTER SET utf8mb4
 DEFAULT COLLATE utf8mb4_general_ci;
 
 USE enterprise;
+
+CREATE TABLE department(
+depid int AUTO_INCREMENT NOT NULL,
+dep_name varchar(50),
+n_workers int,
+PRIMARY KEY(depid)
+)DEFAULT CHARSET = utf8mb4;
+
+INSERT INTO department (dep_name, n_workers) VALUES
+('Marketing', 15),
+('Adm', 10),
+('Managers', 3),
+('Director', 1);
+
+DROP TABLE department;
 
 -- TABLE WORKERS
 CREATE TABLE workers(
@@ -191,14 +213,22 @@ PRIMARY KEY(id)
 ALTER TABLE workers
 MODIFY COLUMN admission_date YEAR;
 
-INSERT INTO workers
-VALUES
-(DEFAULT, 'Jorge', 'Cleaner', '4520.00', '2022'),
-(DEFAULT, 'Jane', 'Manager', '21940.00', '2023'),
-(DEFAULT, 'Benjamin', 'Marketing', '10380.00', '2021'),
-(DEFAULT, 'John', 'Seller', '12850.00', '2020'),
-(DEFAULT, 'Leonard', 'Analyst', '14740.00', '2022'),
-(DEFAULT, 'Alan', 'Supervisor', '15590.00', '2021');
+ALTER TABLE workers
+DROP COLUMN worker_role;
+
+ALTER TABLE workers
+ADD COLUMN workerid int AFTER worker_name;
+
+ALTER TABLE workers
+ADD FOREIGN KEY (workerid) REFERENCES department(depid);
+
+INSERT INTO workers VALUES
+(DEFAULT, 'Jorge', 2, '4520.00', '2022'),
+(DEFAULT, 'Jane', 4, '21940.00', '2023'),
+(DEFAULT, 'Benjamin', 3, '10380.00', '2021'),
+(DEFAULT, 'John', 1, '12850.00', '2020'),
+(DEFAULT, 'Leonard', 1, '14740.00', '2022'),
+(DEFAULT, 'Alan', 3, '15590.00', '2021');
 
 SELECT * FROM workers;
 
@@ -217,7 +247,15 @@ WHERE worker_name LIKE 'A%';
 SELECT * FROM workers
 WHERE worker_role LIKE '%s';
 
+SELECT w.worker_name AS 'Name', d.dep_name AS 'Department' FROM workers AS w
+JOIN department AS d ON d.depid = w.workerid;
+
+ 
+
 TRUNCATE workers;
+
+
+
 
 
 
@@ -251,6 +289,9 @@ VALUES
 SELECT COUNT(title) FROM movies;
 
 SELECT AVG(duration) FROM movies;
+
+SELECT title FROM movies
+WHERE title LIKE '%blade%' AND duration > 120;
 
 SELECT * FROM movies;
 TRUNCATE movies;
