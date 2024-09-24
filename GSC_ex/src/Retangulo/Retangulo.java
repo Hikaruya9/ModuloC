@@ -33,11 +33,13 @@ public class Retangulo {
         this.altura = altura;
     }
     
-    public void calcularArea() {
-        
+    public double calcularArea() {
+        double area = this.largura*this.altura;
+        return area;
     }
     
-    public void calcularPerimetro() {
-        
+    public double calcularPerimetro() {
+        double perimetro = (this.altura+this.largura)*2;
+        return perimetro;
     }
 }
