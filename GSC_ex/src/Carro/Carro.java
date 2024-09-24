@@ -72,4 +72,11 @@ public class Carro {
         }
     }
     
+    public void acelerar() {
+        if (this.ligado == true) {
+            System.out.println("O carro esta acelerando!\nLembre-se de colocar cinto para sua segurança!");
+        } else {
+            System.out.println("Ligue o carro antes de comecar a acelerar!");
+        }
+    }
 }

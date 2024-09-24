@@ -47,4 +47,13 @@ public class ContaBancaria {
         saldo += valor;
         System.out.printf("Saldo atual: R$%.2f\n",getSaldo());
     }
+    
+    public void sacar(double valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            System.out.printf("Voce realizou o saque com sucesso!\nSaldo atualizado: R$%.2f\n",getSaldo());
+        } else {
+            System.out.printf("Voce nao tem saldo suficiente para fazer o saque!\nSaldo atual: R$%.2f\n",getSaldo());
+        }
+    }
 }

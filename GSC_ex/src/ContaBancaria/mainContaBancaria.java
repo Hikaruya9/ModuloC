@@ -26,5 +26,8 @@ public class mainContaBancaria {
         System.out.println("Numero da conta: "+cb1.getNumeroConta());
         System.out.println("Saldo: "+cb1.getSaldo());
         System.out.println("Titular: "+cb1.getTitular());
+        System.out.println("--------------------------------------------------------------------");
+        
+        cb1.sacar(500.00);
     }
 }

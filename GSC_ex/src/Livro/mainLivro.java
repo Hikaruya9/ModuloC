@@ -11,6 +11,7 @@ package Livro;
 public class mainLivro {
     public static void main(String[] args) {
         Livro l1 = new Livro("1984","George Orwell",1952,true);
+        Livro l2 = new Livro("Art of War","Sun Tzu");
         
         System.out.println(l1.getTitle());
         System.out.println(l1.getAuthor());
@@ -19,7 +20,7 @@ public class mainLivro {
         
         l1.emprestar();
         l1.devolver();
-        System.out.println("\n");
+        System.out.println("--------------------------------------------------------------------------------------");
         
         l1.setTitle("Aprendendo a Aprender");
         l1.setAuthor("Barbara Oakley");
@@ -32,5 +33,8 @@ public class mainLivro {
         System.out.println(l1.isAvailable()+"\n");
         
         l1.emprestar();
+        System.out.println("--------------------------------------------------------------------------------------");
+        System.out.println("Livro: "+l2.getTitle()+"\nAutor: "+l2.getAuthor());
+        
     }
 }

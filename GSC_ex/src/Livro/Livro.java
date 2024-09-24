@@ -14,6 +14,11 @@ public class Livro {
     private String author;
     private int releaseYear;
     private boolean available;
+    
+    public Livro(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
 
     public Livro(String title, String author, int releaseYear, boolean available) {
         this.title = title;
