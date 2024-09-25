@@ -11,9 +11,9 @@ package Casa;
 public class Casa {
     private int numero;
     private String cor;
-    private String proprietario;
+    private Pessoa proprietario;
 
-    public Casa(int numero, String cor, String proprietario) {
+    public Casa(int numero, String cor, Pessoa proprietario) {
         this.numero = numero;
         this.cor = cor;
         this.proprietario = proprietario;
@@ -36,11 +36,11 @@ public class Casa {
     }
 
     public String getProprietario() {
-        return proprietario;
+        return proprietario.getNome();
     }
 
     public void setProprietario(String proprietario) {
-        this.proprietario = proprietario;
+        this.proprietario.setNome(proprietario);
     }
     
 }
