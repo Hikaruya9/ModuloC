@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package SistemaPedidosOnline;
+package SistemaReservasHotel;
 
 /**
  *
  * @author macig
  */
-public interface Produto {
-    public abstract String obterNome();
-    public abstract double obterPreco();
-    public abstract void adicionarAoCarrinho(CarrinhoCompras carrinho);
+public interface Quarto {
+    public abstract String obterTipo();
+    public abstract double obterPrecoDiaria();
+    public abstract void reservar();
 }

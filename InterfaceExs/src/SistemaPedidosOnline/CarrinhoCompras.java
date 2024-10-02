@@ -8,8 +8,6 @@ package SistemaPedidosOnline;
  *
  * @author macig
  */
-public interface Produto {
-    public abstract String obterNome();
-    public abstract double obterPreco();
-    public abstract void adicionarAoCarrinho(CarrinhoCompras carrinho);
+public interface CarrinhoCompras {
+    public abstract void adicionarProduto(Produto produto);
 }
