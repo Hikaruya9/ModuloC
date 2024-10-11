@@ -33,5 +33,10 @@ public class mainCarro {
         
         c1.ligar();
         System.out.println("Ligado: "+c1.isLigado());
+        System.out.println("=================================================");
+        c1.acelerar();
+        System.out.println("-------------------------------------------------");
+        c1.desligar();
+        c1.acelerar();
     }
 }
