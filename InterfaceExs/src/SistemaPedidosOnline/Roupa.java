@@ -45,10 +45,11 @@ public class Roupa implements Produto,CarrinhoCompras {
 
     @Override
     public void adicionarAoCarrinho(CarrinhoCompras carrinho) {
+        
     }
 
     @Override
     public void adicionarProduto(Produto produto) {
-        System.out.println("teste");
+        
     }
 }

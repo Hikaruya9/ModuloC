@@ -8,7 +8,7 @@ package SistemaPedidosOnline;
  *
  * @author macig
  */
-public class Eletronico implements Produto {
+public class Eletronico implements Produto,CarrinhoCompras {
     private String nome;
     private double preco;
 
@@ -46,5 +46,10 @@ public class Eletronico implements Produto {
     @Override
     public void adicionarAoCarrinho(CarrinhoCompras carrinho) {
         
+    }
+
+    @Override
+    public void adicionarProduto(Produto produto) {
+
     }
 }

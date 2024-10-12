@@ -20,7 +20,7 @@ public class mainSistemaPedidosOnline {
         System.out.println("--------------------------------");
         r1.obterPreco();
         System.out.println("--------------------------------");
-        r1.adicionarAoCarrinho(r1);
+        
         System.out.println("================================");
         e1.obterNome();
         System.out.println("--------------------------------");
