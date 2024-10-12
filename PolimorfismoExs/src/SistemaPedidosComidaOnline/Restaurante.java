@@ -9,5 +9,6 @@ package SistemaPedidosComidaOnline;
  * @author macig
  */
 public interface Restaurante {
-    
+    public abstract void DiPaolo();
+    public abstract void PeppoCucina();
 }

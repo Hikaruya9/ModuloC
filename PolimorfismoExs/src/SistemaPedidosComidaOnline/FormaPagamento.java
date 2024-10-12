@@ -9,5 +9,6 @@ package SistemaPedidosComidaOnline;
  * @author macig
  */
 public interface FormaPagamento {
-    
+    public abstract void dinheiro();
+    public abstract void cartao();
 }
